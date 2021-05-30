@@ -1,5 +1,5 @@
 class Thead {
-    constructor(thead, thList, columns) {
+    constructor({thead, thList, columns}) {
         this.thead = thead;
         this.columnByTh = Object.fromEntries(thList.map((_, i) => [thList[i], columns[i]]))
     }

@@ -1,5 +1,5 @@
 class SearchAction {
-    constructor(searchBar, tbody, cacheDB) {
+    constructor({searchBar, tbody, cacheDB}) {
         this.searchBar = searchBar;
         this.tbody = tbody;
         this.cacheDB = cacheDB;

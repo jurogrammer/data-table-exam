@@ -1,8 +1,8 @@
 class TbodyAction {
-    constructor(tbody, requester, cacheData) {
+    constructor({tbody, requester, cacheDB}) {
         this.tbody = tbody;
         this.requester = requester;
-        this.cacheData = cacheData;
+        this.cacheDB = cacheDB;
     }
 
 
@@ -12,7 +12,7 @@ class TbodyAction {
             .then((res) => {
                 let item = res.item;
 
-                this.cacheData.create(item);
+                this.cacheDB.create(item);
                 this.tbody.create(item);
                 this.tbody.renderTbody();
 

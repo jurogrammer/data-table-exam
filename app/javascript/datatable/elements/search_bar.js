@@ -1,6 +1,5 @@
 class SearchBar {
-    constructor({searchBar, searchOption, q, conditionInfos}) {
-        this.searchBar = searchBar;
+    constructor({searchOption, q, conditionInfos}) {
         this.searchOption = searchOption;
         this.q = q;
         this.conditionInfos = conditionInfos; // [{condition :element, column :string}]

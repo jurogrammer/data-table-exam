@@ -1,5 +1,5 @@
 class TheadAction {
-    constructor(tbody, thead) {
+    constructor({tbody, thead}) {
         this.tbody = tbody;
         this.thead = thead;
     }
