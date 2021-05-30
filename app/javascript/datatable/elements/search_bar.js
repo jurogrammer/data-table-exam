@@ -3,7 +3,7 @@ class SearchBar {
         this.searchBar = searchBar;
         this.searchOption = searchOption;
         this.q = q;
-        this.conditionInfos = conditionInfos; // [{condition :element, column :string, value :string or integer}]
+        this.conditionInfos = conditionInfos; // [{condition :element, column :string}]
     }
 
     presentData(items) {
@@ -12,8 +12,10 @@ class SearchBar {
 
     matchConditions(item) {
         this.conditionInfos.reduce((accBoolean, curConditionInfo) => {
-            if (curConditionInfo.value === 'ALL') return accBoolean
-            return accBoolean && (item[curConditionInfo.column] === curConditionInfo.value)
+            let conditionValue = curConditionInfo.condition.value;
+
+            return (conditionValue === 'ALL') ? accBoolean
+                : accBoolean && (item[curConditionInfo.column] === conditionValue);
         }, true)
     }
 
@@ -24,10 +26,5 @@ class SearchBar {
     isMatch(optionValue, query) {
         // 정규표현식을 적용할 경우엔 소괄호 ()가 검색 안 되므로 indexOf로 처리한다.
         return optionValue.indexOf(query) >= 0;
-    }
-
-    changeConditionValue(condition, value) {
-        let targetConditionInfo = this.conditionInfos.find(conditionInfo => conditionInfo.condition === condition)
-        targetConditionInfo.value = value;
     }
 }
