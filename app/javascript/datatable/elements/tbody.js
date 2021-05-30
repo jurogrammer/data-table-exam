@@ -1,6 +1,6 @@
 export class Tbody {
-    constructor({tableId, columns}) {
-        this.tbody = document.getElementById(tableId).querySelector('tbody');
+    constructor({tbody, columns}) {
+        this.tbody = tbody;
         this.columns = columns; //column name을 받도록 합니다.
         this.items = null;
         this.sortOrder = columns

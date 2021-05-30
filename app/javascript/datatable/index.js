@@ -2,14 +2,10 @@ import {Tbody} from './elements/tbody'
 
 
 let juTable = {}
-juTable.start = function() {
+juTable.start = function ({tableId, columns}) {
     const tbody = new Tbody({
-        tableId: 'user-table',
-        columns: [
-            'id',
-            'name',
-            'phone_number'
-        ]
+        tbody: document.getElementById(tableId).querySelector('tbody'),
+        columns: columns
     })
 
     tbody.setItems([
@@ -38,5 +34,8 @@ juTable.start = function() {
 }
 
 window.onload = function () {
-    juTable.start();
+    juTable.start({
+        tableId: 'user-table',
+        columns: ['id', 'name', 'phone_number']
+    });
 }
