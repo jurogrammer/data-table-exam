@@ -8,5 +8,6 @@ class UsersController < ApplicationController
   end
 
   def create
+    render json: {response: 'good post'}
   end
 end
