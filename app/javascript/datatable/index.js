@@ -1,8 +1,8 @@
 import {Tbody} from './elements/tbody'
 
 
-let juTable = {}
-juTable.start = function ({tableId, columns, items, searchOptionId, qId, searchFormId, conditionInfos}) {
+window.juTable = {}
+window.juTable.start = function ({tableId, columns, items, searchOptionId, qId, searchFormId, conditionInfos}) {
     let tableElm = document.getElementById(tableId)
     let tbodyElm = tableElm.querySelector('tbody');
     let theadElm = tableElm.querySelector('thead');
@@ -59,16 +59,16 @@ juTable.start = function ({tableId, columns, items, searchOptionId, qId, searchF
     searchAction.search();
 }
 
-window.onload = function () {
-    juTable.start({
-        tableId: 'user-table',
-        columns: ['id', 'name', 'phone_number'],
-        items: [{id: 1, name: 'hello', phone_number: '010101'}],
-        searchOptionId: 'searchOption',
-        qId: 'q',
-        searchFormId: 'searchForm',
-        // conditionInfos: [  //[{condition :element, column :string}]
-        //     ['sex',]
-        // ]
-    });
-}
+// window.onload = function () {
+//     juTable.start({
+//         tableId: 'user-table',
+//         columns: ['id', 'name', 'phone_number'],
+//         items: [{id: 1, name: 'hello', phone_number: '010101'}],
+//         searchOptionId: 'searchOption',
+//         qId: 'q',
+//         searchFormId: 'searchForm',
+//         // conditionInfos: [  //[{condition :element, column :string}]
+//         //     ['sex',]
+//         // ]
+//     });
+// }
