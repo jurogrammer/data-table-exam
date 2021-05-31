@@ -23,6 +23,6 @@ export default class SearchBar {
 
     isMatch(optionValue, query) {
         // 정규표현식을 적용할 경우엔 소괄호 ()가 검색 안 되므로 indexOf로 처리한다.
-        return optionValue.indexOf(query) >= 0;
+        return optionValue.toString().indexOf(query) >= 0;
     }
 }
