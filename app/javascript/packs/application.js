@@ -12,4 +12,4 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-require("../datatable/index")
+require("../datatable/ju_table")
