@@ -10,7 +10,6 @@ class Listener {
     init() {
         this.submitSearching();
         this.clickThead();
-        this.clickCreateBtn();
     }
 
     submitSearching() {
@@ -24,9 +23,5 @@ class Listener {
         this.table.querySelector('thead').addEventListener('click', (e) => {
             this.theadAction.sort(e.target.closest('th'));
         })
-    }
-
-    clickCreateBtn() {
-
     }
 }

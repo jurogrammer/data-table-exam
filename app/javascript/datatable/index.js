@@ -2,14 +2,10 @@ import {Tbody} from './elements/tbody'
 
 
 window.juTable = {}
-window.juTable.start = function ({tableId, columns, items, searchOptionId, qId, searchFormId, conditionInfos}) {
-    let tableElm = document.getElementById(tableId)
-    let tbodyElm = tableElm.querySelector('tbody');
-    let theadElm = tableElm.querySelector('thead');
-    let thElmList = tableElm.querySelectorAll('th');
-    let searchOptionElem = document.getElementById(searchOptionId);
-    let qElem = document.getElementById(qId);
-    let searchForm = document.getElementById(searchFormId);
+window.juTable.start = function ({tableElem, columns, items, searchOptionElem, qElem, searchFormElem, conditionInfos}) {
+    let tbodyElem = tableElem.querySelector('tbody');
+    let theadElem = tableElem.querySelector('thead');
+    let thElemList = tableElem.querySelectorAll('th');
     // let sexType = document.getElementById();
 
 
@@ -21,12 +17,12 @@ window.juTable.start = function ({tableId, columns, items, searchOptionId, qId, 
         conditionInfos: conditionInfos
     })
     let tbody = new Tbody({
-        tbody: tbodyElm,
+        tbody: tbodyElem,
         columns: columns
     })
     let thead = new Thead({
-        thead: theadElm,
-        thList: thElmList,
+        thead: theadElem,
+        thList: thElemList,
         columns: columns,
     })
 
@@ -48,8 +44,8 @@ window.juTable.start = function ({tableId, columns, items, searchOptionId, qId, 
     })
 
     let listener = new Listener({
-        searchForm: searchForm,
-        table: tableElm,
+        searchForm: searchFormElem,
+        table: tableElem,
         searchAction: searchAction,
         tbodyAction: tbodyAction,
         theadAction: theadAction

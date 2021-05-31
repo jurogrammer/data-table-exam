@@ -35,11 +35,11 @@ export class Tbody {
         this.tbody.innerHTML = this.tbodyHTML();
     }
 
-    tbodyHTML() {
+    #tbodyHTML() {
         return this.items.map((item) => this.rowHTML(item)).join("");
     }
 
-    rowHTML(item) {
+    #rowHTML(item) {
         return `<tr>${this.columns.map((column) => `<td>${item[column]}</td>`).join("")}</tr>`
     }
 }
