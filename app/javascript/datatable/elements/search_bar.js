@@ -12,7 +12,6 @@ export default class SearchBar {
     matchConditions(item) {
         return this.conditionInfos.reduce((accBoolean, curConditionInfo) => {
             let conditionValue = curConditionInfo.condition.value;
-
             return (conditionValue === 'ALL') ? accBoolean
                 : accBoolean && (item[curConditionInfo.column] === conditionValue);
         }, true)
