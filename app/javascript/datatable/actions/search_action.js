@@ -1,4 +1,4 @@
-class SearchAction {
+export default class SearchAction {
     constructor({searchBar, tbody, cacheDB}) {
         this.searchBar = searchBar;
         this.tbody = tbody;

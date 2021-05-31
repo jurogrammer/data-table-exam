@@ -1,4 +1,4 @@
-class SearchBar {
+export default class SearchBar {
     constructor({searchOption, q, conditionInfos}) {
         this.searchOption = searchOption;
         this.q = q;
@@ -10,7 +10,7 @@ class SearchBar {
     }
 
     matchConditions(item) {
-        this.conditionInfos.reduce((accBoolean, curConditionInfo) => {
+        return this.conditionInfos.reduce((accBoolean, curConditionInfo) => {
             let conditionValue = curConditionInfo.condition.value;
 
             return (conditionValue === 'ALL') ? accBoolean

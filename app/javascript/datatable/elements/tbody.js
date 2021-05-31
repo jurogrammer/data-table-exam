@@ -1,4 +1,4 @@
-export class Tbody {
+export default class Tbody {
     constructor({tbody, columns}) {
         this.tbody = tbody;
         this.columns = columns; //column name을 받도록 합니다.
@@ -35,11 +35,11 @@ export class Tbody {
         this.tbody.innerHTML = this.tbodyHTML();
     }
 
-    #tbodyHTML() {
+    tbodyHTML() {
         return this.items.map((item) => this.rowHTML(item)).join("");
     }
 
-    #rowHTML(item) {
+    rowHTML(item) {
         return `<tr>${this.columns.map((column) => `<td>${item[column]}</td>`).join("")}</tr>`
     }
 }

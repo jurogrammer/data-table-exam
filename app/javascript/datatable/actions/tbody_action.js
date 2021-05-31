@@ -1,4 +1,4 @@
-class TbodyAction {
+export default class TbodyAction {
     constructor({tbody, requester, cacheDB}) {
         this.tbody = tbody;
         this.requester = requester;

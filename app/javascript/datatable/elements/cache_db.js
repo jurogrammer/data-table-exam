@@ -1,4 +1,4 @@
-class CacheDB {
+export default class CacheDB {
     constructor(items) {
         this.items = items;
     }

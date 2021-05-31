@@ -1,4 +1,4 @@
-class Listener {
+export default class Listener {
     constructor({searchForm, table, searchAction, tbodyAction, theadAction}) {
         this.searchForm = searchForm;
         this.table = table;

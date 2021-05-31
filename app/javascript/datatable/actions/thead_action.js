@@ -1,4 +1,4 @@
-class TheadAction {
+export default class TheadAction {
     constructor({tbody, thead}) {
         this.tbody = tbody;
         this.thead = thead;

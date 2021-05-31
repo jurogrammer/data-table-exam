@@ -1,12 +1,25 @@
-<form id="searchForm">
-  <label for="searchOption"></label>
-  <select name="" id="searchOption">
-    <option value="id" selected>아이디</option>
+<form id="search-form">
+  <label for="search-option"></label>
+  <select name="" id="search-option">
+    <option value="ALL" selected>전체</option>
+    <option value="id">아이디</option>
     <option value="name">이름</option>
     <option value="phone_number">핸드폰번호</option>
   </select>
   <label for="q"></label>
   <input type="text" id="q" placeholder="검색어를 입력해주세요">
+
+  <select name="" id="sex-type">
+    <option value="ALL" selected>전체</option>
+    <option value="M">남자</option>
+    <option value="W">여자</option>
+  </select>
+  <select name="" id="department-type">
+    <option value="ALL" selected>전체</option>
+    <option value="development">개발부서</option>
+    <option value="marketing">마케팅부서</option>
+    <option value="operation">운영부서</option>
+  </select>
 </form>
 <table id="user-table">
   <thead>
@@ -14,6 +27,8 @@
     <th>아이디</th>
     <th>이름</th>
     <th>핸드폰번호</th>
+    <th>성별</th>
+    <th>부서</th>
   </tr>
   </thead>
   <tbody>
